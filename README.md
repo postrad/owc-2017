@@ -7,6 +7,6 @@ Team Wubba Lubba Dub Dub's Nerdery 2017 OWC codebase
   - pros: everyone uses it
   - cons: everyone uses it
   
--Jekyl
+- Jekyl
  - pros: low complexity
  - cons: requires developer to update
