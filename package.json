@@ -1,0 +1,31 @@
+{
+  "name": "owc-2017",
+  "version": "1.0.0",
+  "description": "ConnectWC website for the Nerdery 2017 Overnight Website Challenge",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/postrad/owc-2017.git"
+  },
+  "author": "Michael McDonald",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/postrad/owc-2017/issues"
+  },
+  "homepage": "https://github.com/postrad/owc-2017#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.1.3",
+    "eslint-plugin-import": "^2.2.0",
+    "gulp": "^3.9.1"
+  }
+}
