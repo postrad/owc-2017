@@ -1,0 +1,92 @@
+/*
+ Theme Name:   Benevolent Child
+ Theme URI:    http://example.com/twenty-fifteen-child/
+ Description:  benevolent child theme
+ Author:       OWC Team
+ Author URI:   http://example.com
+ Template:     benevolent
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  benevolent-child
+*/
+
+/*
+COLOR:
+
+green - dark: #677024
+green - light: #D0D2B3
+
+purple - dark: #5A2968
+purple - light: #D3C1DE
+
+orange - dark: #D5771A
+orange - light: #F8D1A9
+
+black: #000
+
+gray - dark: #555
+gray - medium: #C1C1C1
+gray - light: #E5E5E5
+
+*/
+
+/*
+  BASE-FONT
+  body {
+    font:18px/28px 'Raleway', sans-serif;
+  }
+*/
+
+/*
+  FONT-SIZE
+
+
+  base: 18px (current), suggested: 16px
+  h1: 30px (current)
+  h2: 40px (current)
+  h3: 30px (current)
+
+*/
+
+/*
+  FONT-FAMILY
+
+  font-family: 'Raleway', sans-serif;
+*/
+
+/* Header */
+.home.has-slider .site-header .header-bottom, .site-header .header-bottom {
+  background-color: #5A2968 !important;
+}
+
+.home.blog .site-header {
+  background-color: #5A2968 !important;
+}
+
+.site-header .header-top {
+  background-color: #5A2968 !important;
+}
+
+/* links */
+a {
+  color: #D5771A !important;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+#secondary .widget ul li a:hover {
+  color: #D5771A;
+}
+
+#primary .post .entry-footer .readmore {
+  color: #D5771A !important;
+}
+
+.main-navigation a:hover, .main-navigation ul li:hover > a {
+  color: #D5771A !important;
+}
