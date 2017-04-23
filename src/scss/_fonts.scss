@@ -12,3 +12,8 @@ h5,
 h6 {
   font-family: 'Montserrat', sans-serif !important;
 }
+
+/* blog overrides */
+#primary .post .entry-header .entry-title {
+  font-family: inherit !important;
+}
