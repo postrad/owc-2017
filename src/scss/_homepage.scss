@@ -16,6 +16,14 @@
   }
 }
 
+.intro .columns-3 {
+  text-align: center;
+}
+
+.intro .columns-3 .img-holder {
+  margin-left: 0 !important;
+}
+
 #text-14 { color: $snow; }
 
 .es_textbox_button { width: 150px; background: $mango !important; }
@@ -25,6 +33,10 @@
 .es_shortcode_form_name { display: none; }
 
 #benevolent_pro_contact-3 > .widget-title { color: $noir; }
+
+.intro .columns-3 .img-holder img {
+  width: 159px;
+  height: 159px;
 
 .header-bottom {
   padding-bottom: 0;
