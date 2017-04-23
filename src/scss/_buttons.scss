@@ -12,7 +12,7 @@ a.btn {
   border-radius: 6px;
   border-color: $mango;
   background-color: $mango;
-  color: $snow;
+  color: $snow !important;
   white-space: nowrap;
-  text-transform: none;
+  text-transform: none !important;
 }
