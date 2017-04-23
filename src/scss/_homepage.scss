@@ -12,8 +12,13 @@
   .intro .columns-3 {
     display: flex;
     flex-direction: column;
-    text-align: center;
   }
+}
+
+.intro .columns-3 .img-holder {
+  margin-left: 0 !important;
+  margin-bottom: 3px;
+  text-align: center;
 }
 
 #text-14 { color: $snow; }
@@ -25,4 +30,3 @@
 .es_shortcode_form_name { display: none; }
 
 #benevolent_pro_contact-3 > .widget-title { color: $noir; }
-
