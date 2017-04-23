@@ -34,18 +34,21 @@
 
 #benevolent_pro_contact-3 > .widget-title { color: $noir; }
 
+.header-bottom { padding-bottom: 0 !important; }
+
 .intro .columns-3 .img-holder img {
   width: 159px;
   height: 159px;
-
-.header-bottom {
-  padding-bottom: 0;
 }
 
 #primary-menu.menu .menu-item {
+  transition : border 200ms ease-out;
+  padding-bottom: 10px;
   border-bottom: 4px solid $fog;
 }
 
-#primary-menu.menu .menu-item:hover {
-  border-bottom: 4px solid $mango;
-}
+#primary-menu.menu .menu-item:hover { border-bottom: 4px solid $mango; }
+
+.main-navigation a:hover { color: $mango !important; }
+
+.main-navigation ul li:hover > a { color: $mango !important; }
