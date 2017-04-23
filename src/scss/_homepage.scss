@@ -33,7 +33,19 @@
 
 #benevolent_pro_contact-3 > .widget-title { color: $noir; }
 
+
 .intro .columns-3 .img-holder img {
   width: 159px;
   height: 159px;
+
+.header-bottom {
+  padding-bottom: 0;
+}
+
+#primary-menu.menu .menu-item {
+  border-bottom: 4px solid $fog;
+}
+
+#primary-menu.menu .menu-item:hover {
+  border-bottom: 4px solid $mango;
 }
