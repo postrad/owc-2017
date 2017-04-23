@@ -14,14 +14,14 @@ const dirs = {
 
 gulp.task('default', ['build']);
 
-gulp.task('styles', () => {
-  return gulp.src(gulpconfig.styles.build.src)
+gulp.task('styles', () => (
+  gulp.src(gulpconfig.styles.build.src)
     .pipe(plugins.sourcemaps.init())
     .pipe(plugins.sass(gulpconfig.styles.libsass).on('error', plugins.sass.logError))
     .pipe(plugins.cssnano(gulpconfig.styles.cssnano))
     .pipe(plugins.sourcemaps.write('./'))
-    .pipe(gulp.dest(gulpconfig.styles.build.dest));
-});
+    .pipe(gulp.dest(gulpconfig.styles.build.dest))
+  ));
 
 // Build a working copy of the theme
 gulp.task('build', ['styles']);
