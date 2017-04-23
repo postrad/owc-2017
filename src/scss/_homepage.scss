@@ -5,6 +5,25 @@
 
 .stats { background-color: $grimace; }
 
+#es_txt_name_pg { display: none }
+.es_shortcode_form_name { display: none }
+
+@media only screen and (max-width: 767px) {
+  .intro .columns-3 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.intro .columns-3 {
+  text-align: center;
+}
+
+.intro .columns-3 .img-holder {
+  margin-left: 0 !important;
+}
+
 #text-14 { color: $snow; }
 
 .es_textbox_button { width: 150px; background: $mango !important; }
@@ -16,6 +35,11 @@
 #benevolent_pro_contact-3 > .widget-title { color: $noir; }
 
 .header-bottom { padding-bottom: 0 !important; }
+
+.intro .columns-3 .img-holder img {
+  width: 159px;
+  height: 159px;
+}
 
 #primary-menu.menu .menu-item {
   transition : border 200ms ease-out;
