@@ -12,12 +12,9 @@ const dirs = {
   siteRoot: '/site/wwwroot',
 };
 
-gulp.task('default', () => {
-  console.log(`this is the default task! this is the name of dirs.dest: ${dirs.dest}`);
-});
+gulp.task('default', ['build']);
 
 gulp.task('styles', () => {
-  console.log(gulpconfig.styles.build.dest);
   return gulp.src(gulpconfig.styles.build.src)
     .pipe(plugins.sourcemaps.init())
     .pipe(plugins.sass(gulpconfig.styles.libsass).on('error', plugins.sass.logError))
