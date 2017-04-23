@@ -1,0 +1,18 @@
+.site-footer {
+  background: $snow;
+
+  .site-info,
+  .footer-t {
+    background: $snow;
+  }
+
+  .footer-t {
+    border-bottom: 2x solid $wool;
+  }
+}
+
+#benevolent_pro_social_links-4 > .widget-title,
+#benevolent_pro_contact-3 > .widget-title,
+#text-12 > .widget-title {
+  color: $noir;
+}

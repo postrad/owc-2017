@@ -9,13 +9,19 @@ a.btn {
   cursor: pointer;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
-  border-radius: 6px;
+  border-radius: 4px;
   border-color: $mango;
   background-color: $mango;
   color: $snow !important;
   white-space: nowrap;
   text-transform: none !important;
   padding: 10px 16px !important;
+}
+
+.es_textbox_button {
+  width: 150px;
+  background: $mango !important;
+  border-radius: 4px;
 }
 
 // Primary donate button (because this theme uses that class for things entirely unrelated)
@@ -25,4 +31,16 @@ a.btn {
   border-radius: 4px;
   border-color: $mango;
   background: $mango;
+}
+
+.promotional-block .widget_benevolent_pro_cta_widget .btn-donate {
+  background: $mango;
+  color: $snow;
+  border-radius: 4px;
+}
+
+.promotional-block .widget_benevolent_pro_cta_widget .btn-donate:hover,
+.promotional-block .widget_benevolent_pro_cta_widget .btn-donate:focus {
+  background: $mango;
+  color: $snow;
 }

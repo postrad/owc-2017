@@ -7,9 +7,14 @@
 // Normalize: make browsers render things more consistently
 @import "normalize";
 
+a {
+  color: $mango !important;
+}
+
 // Everything else
 @import "helpers";
 @import "buttons";
+@import "header";
+@import "footer";
 @import "homepage";
-@import "fonts";
 @import "calendar";
