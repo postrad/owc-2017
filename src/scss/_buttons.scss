@@ -17,3 +17,11 @@ a.btn {
   text-transform: none !important;
   padding: 10px 16px !important;
 }
+
+// Primary donate button (because this theme uses that class for things entirely unrelated)
+#primary-menu > .btn-donate {
+  width: initial !important;
+  border-radius: 4px;
+  border-color: $mango;
+  background-color: $mango;
+}
