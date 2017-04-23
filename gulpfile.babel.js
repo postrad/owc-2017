@@ -1,7 +1,11 @@
 import gulp from 'gulp';
 import gutil from 'gulp-util';
 import ftp from 'vinyl-ftp';
+import gulpLoadPlugins from 'gulp-load-plugins';
 import config from './config.json';
+import gulpconfig from './gulpconfig';
+
+const plugins = gulpLoadPlugins({ camelize: true });
 
 const dirs = {
   dest: 'build',
@@ -10,6 +14,16 @@ const dirs = {
 
 gulp.task('default', () => {
   console.log(`this is the default task! this is the name of dirs.dest: ${dirs.dest}`);
+});
+
+gulp.task('styles', () => {
+  console.log(gulpconfig.styles.build.dest);
+  return gulp.src(gulpconfig.styles.build.src)
+    .pipe(plugins.sourcemaps.init()) // Note that sourcemaps need to be initialized with libsass
+    .pipe(plugins.sass(gulpconfig.styles.libsass).on('error', plugins.sass.logError))
+    .pipe(plugins.cssnano(gulpconfig.styles.cssnano))
+    .pipe(plugins.sourcemaps.write('./'))
+    .pipe(gulp.dest(gulpconfig.styles.build.dest));
 });
 
 gulp.task('deploy', () => {
