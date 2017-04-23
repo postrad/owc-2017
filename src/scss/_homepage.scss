@@ -65,3 +65,23 @@
 #search-2 {
   margin: 0;
 }
+
+.tribe-events-calendar td div[id*=tribe-events-daynum-],
+.tribe-events-calendar td div[id*=tribe-events-daynum-] a {
+  margin-top: 0;
+}
+
+/*
+  search bar
+*/
+
+.widget.widget_search .search-form,
+.search .search-form {
+  padding: 0;
+}
+
+.widget.widget_search .search-form input[type="submit"],
+.search .search-form input[type="submit"] {
+  background-position: center;
+  width: 10%;
+}
