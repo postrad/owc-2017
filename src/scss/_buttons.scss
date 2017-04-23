@@ -27,7 +27,7 @@ a.btn {
 // Primary donate button (because this theme uses that class for things entirely unrelated)
 #primary-menu .btn-donate {
   width: initial !important;
-  color: $snow;
+  color: $snow !important;
   border-radius: 4px;
   border-color: $mango;
   background: $mango;
@@ -35,12 +35,12 @@ a.btn {
 
 .promotional-block .widget_benevolent_pro_cta_widget .btn-donate {
   background: $mango;
-  color: $snow;
+  color: $snow !important;
   border-radius: 4px;
 }
 
 .promotional-block .widget_benevolent_pro_cta_widget .btn-donate:hover,
 .promotional-block .widget_benevolent_pro_cta_widget .btn-donate:focus {
   background: $mango;
-  color: $snow;
+  color: $snow !important;
 }

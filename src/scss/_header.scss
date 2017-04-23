@@ -4,18 +4,22 @@
   border-bottom: 4px solid $grimace;
 }
 
-.main-navigation a {
+#primary-menu a {
   color: $snow !important;
 }
 
-#primary-menu.menu .menu-item:hover { border-bottom: 4px solid $mango; }
+#primary-menu.menu .menu-item:hover,
+#primary-menu.menu .menu-item:focus,
+#primary-menu.menu .menu-item.current-menu-item { border-bottom: 4px solid $mango; }
 
-.main-navigation a:hover,
-.main-navigation a:focus {
+#primary-menu a:hover,
+#primary-menu a:focus,
+#primary-menu.menu .menu-item.current-menu-item a  {
   color: $mango !important;
 }
 
-.main-navigation ul li:hover > a,
-.main-navigation ul li:focus > a {
+#primary-menu li:hover > a,
+#primary-menu li:focus > a,
+#primary-menu li.current-menu-item {
   color: $mango !important;
 }
