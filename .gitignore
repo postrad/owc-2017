@@ -1,3 +1,5 @@
+build/
+dist/
 config.json
 
 # Logs and databases #
