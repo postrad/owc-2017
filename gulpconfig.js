@@ -64,7 +64,6 @@ const config = {
       src: `${src}scss/**/*.scss`,
       dest: build,
     },
-    compiler: 'libsass', // Choose a Sass compiler: 'libsass' or 'rubysass'
     cssnano: {
       autoprefixer: {
         add: true,

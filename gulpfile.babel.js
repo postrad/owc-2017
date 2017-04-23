@@ -19,14 +19,21 @@ gulp.task('default', () => {
 gulp.task('styles', () => {
   console.log(gulpconfig.styles.build.dest);
   return gulp.src(gulpconfig.styles.build.src)
-    .pipe(plugins.sourcemaps.init()) // Note that sourcemaps need to be initialized with libsass
+    .pipe(plugins.sourcemaps.init())
     .pipe(plugins.sass(gulpconfig.styles.libsass).on('error', plugins.sass.logError))
     .pipe(plugins.cssnano(gulpconfig.styles.cssnano))
     .pipe(plugins.sourcemaps.write('./'))
     .pipe(gulp.dest(gulpconfig.styles.build.dest));
 });
 
-gulp.task('deploy', () => {
+// Build a working copy of the theme
+gulp.task('build', ['styles']);
+
+// Deployment task
+gulp.task('deploy', ['build', 'upload']);
+
+// FTP task
+gulp.task('upload', () => {
   const conn = ftp.create({
     host: config.ftp.host,
     user: config.ftp.user,
@@ -36,11 +43,7 @@ gulp.task('deploy', () => {
   });
 
   const globs = [
-    'src/**',
-    'css/**',
-    'js/**',
-    'fonts/**',
-    'index.html',
+    'build/**',
   ];
 
   // using base = '.' will transfer everything to siteRoot/test correctly
