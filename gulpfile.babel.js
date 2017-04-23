@@ -1,18 +1,36 @@
 import gulp from 'gulp';
 import gutil from 'gulp-util';
 import ftp from 'vinyl-ftp';
+import gulpLoadPlugins from 'gulp-load-plugins';
 import config from './config.json';
+import gulpconfig from './gulpconfig';
+
+const plugins = gulpLoadPlugins({ camelize: true });
 
 const dirs = {
   dest: 'build',
   siteRoot: '/site/wwwroot',
 };
 
-gulp.task('default', () => {
-  console.log(`this is the default task! this is the name of dirs.dest: ${dirs.dest}`);
+gulp.task('default', ['build']);
+
+gulp.task('styles', () => {
+  return gulp.src(gulpconfig.styles.build.src)
+    .pipe(plugins.sourcemaps.init())
+    .pipe(plugins.sass(gulpconfig.styles.libsass).on('error', plugins.sass.logError))
+    .pipe(plugins.cssnano(gulpconfig.styles.cssnano))
+    .pipe(plugins.sourcemaps.write('./'))
+    .pipe(gulp.dest(gulpconfig.styles.build.dest));
 });
 
-gulp.task('deploy', () => {
+// Build a working copy of the theme
+gulp.task('build', ['styles']);
+
+// Deployment task
+gulp.task('deploy', ['build', 'upload']);
+
+// FTP task
+gulp.task('upload', () => {
   const conn = ftp.create({
     host: config.ftp.host,
     user: config.ftp.user,
@@ -22,11 +40,7 @@ gulp.task('deploy', () => {
   });
 
   const globs = [
-    'src/**',
-    'css/**',
-    'js/**',
-    'fonts/**',
-    'index.html',
+    'build/**',
   ];
 
   // using base = '.' will transfer everything to siteRoot/test correctly
