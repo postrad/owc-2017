@@ -18,8 +18,12 @@
   color: $mango !important;
 }
 
-#primary-menu li:hover > a,
-#primary-menu li:focus > a,
-#primary-menu li.current-menu-item {
-  color: $mango !important;
+#primary-menu li:hover > .btn-donate,
+#primary-menu li:focus > .btn-donate,
+#primary-menu .btn-donate:hover,
+#primary-menu .btn-donate:focus,
+.btn-donate:hover,
+.btn-donate:focus {
+  color: #fff !important;
+  text-decoration: underline;
 }
